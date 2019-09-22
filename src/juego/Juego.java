@@ -12,7 +12,7 @@ import cartas.Carta;
  *
  */
 public abstract class Juego {
-	ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
+	private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 	
 	/**
 	 * Constructor de clase sin parámetros (lo utiliza clase Mus).

@@ -82,4 +82,12 @@ public class Jugador {
 	String juego() {
 		return getCartas().toString();
 	}
+	
+	/**
+	 * Sobrescribe el método de la clase Object para que muestre solo nombre del jugador.
+	 * @return el nombre del jugador.
+	 */
+	public String toString() {
+		return nombre;
+	}
 }
