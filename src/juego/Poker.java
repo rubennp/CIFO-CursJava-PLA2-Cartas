@@ -18,8 +18,9 @@ public class Poker extends Juego {
 	/**
 	 * Constructor de la clase Poker.
 	 * @param jugadores son los jugadores que jugarán.
+	 * @throws Exception mínimo 2 jugadores.
 	 */
-	public Poker(ArrayList<Jugador> jugadores) {
+	public Poker(ArrayList<Jugador> jugadores) throws Exception {
 		super(jugadores);
 		this.baraja.barajar();
 	}

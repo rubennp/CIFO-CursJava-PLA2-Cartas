@@ -38,17 +38,26 @@ public class Program {
 		jugadoresPoker.add(jugador3);
 		jugadoresPoker.add(jugador4);
 		
-		Mus mus = new Mus(jugadoresMus);
-		Poker poker = new Poker(jugadoresPoker);
+		try {
+			Mus mus = new Mus();
+			for (Jugador j : jugadoresMus) mus.addJugador(j);
+			
+			System.out.println("* Jugarán al Mus:");
+			System.out.print("-> ");
+			for (Jugador jugador : mus.getJugadores()) System.out.print(jugador.getNombre() + " ");
+			System.out.println("\nCon las cartas : " + mus.getBaraja());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-		System.out.println("* Jugarán al Mus:");
-		System.out.print("-> ");
-		for (Jugador jugador : mus.getJugadores()) System.out.print(jugador.getNombre() + " ");
-		System.out.println("\nCon las cartas : " + mus.getBaraja());
-		System.out.println("\n* Jugarán al Poker:");
-		System.out.print("-> ");
-		for (Jugador jugador : poker.getJugadores()) System.out.print(jugador.getNombre() + " ");
-		System.out.println("\nCon las cartas : " + poker.getBaraja());
+		try {
+			Poker poker = new Poker(jugadoresPoker);
+			System.out.println("\n* Jugarán al Poker:");
+			System.out.print("-> ");
+			for (Jugador jugador : poker.getJugadores()) System.out.print(jugador.getNombre() + " ");
+			System.out.println("\nCon las cartas : " + poker.getBaraja());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-
 }
