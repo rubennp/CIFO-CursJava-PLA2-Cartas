@@ -7,8 +7,18 @@ import java.util.InputMismatchException;
 import juego.Jugador;
 import juego.Poker;
 
+/**
+ * 
+ * Juega al Poker.
+ * @author Rubèn Nieto
+ *
+ */
 public class JuegaPoker {
 
+	/**
+	 * Entrada al programa.
+	 * @param args son los argumentos pasados por línea de comandos.
+	 */
 	public static void main(String[] args) {
 		ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 		Scanner inNumJugadores = new Scanner(System.in);

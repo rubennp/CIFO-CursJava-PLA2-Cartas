@@ -6,8 +6,18 @@ import java.util.Scanner;
 import juego.Jugador;
 import juego.Mus;
 
+/**
+ * 
+ * Juega al Mus.
+ * @author Rubèn Nieto
+ *
+ */
 public class JuegaMus {
 
+	/**
+	 * Entrada al programa.
+	 * @param args son los argumentos pasados por línea de comandos.
+	 */
 	public static void main(String[] args) {
 		ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 		Scanner in = new Scanner(System.in);
