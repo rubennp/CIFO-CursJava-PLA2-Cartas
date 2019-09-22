@@ -26,6 +26,19 @@ public class Program {
 		jugador.darCarta(carta2);
 		System.out.println("El jugador " + jugador.getNombre() + " tiene " + jugador.juego());
 		System.out.println("Después de retirar " + jugador.retirarCarta(0) + ", sus cartas son: " + jugador.juego());
+		
+		Francesa francesa = new Francesa();
+		Espanyola española = new Espanyola();
+		
+		System.out.println(francesa.cartas);
+		System.out.println(española.cartas);
+		
+		francesa.barajar();
+		española.barajar();
+		
+		System.out.println(francesa.cartas);
+		System.out.println(española.cartas);
+		
 	}
 
 }
