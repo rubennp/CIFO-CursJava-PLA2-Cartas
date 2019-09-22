@@ -38,17 +38,13 @@ public class Program {
 		jugadoresPoker.add(jugador3);
 		jugadoresPoker.add(jugador4);
 		
-		try {
-			Mus mus = new Mus();
-			for (Jugador j : jugadoresMus) mus.addJugador(j);
+		Mus mus = new Mus();
+		for (Jugador j : jugadoresMus) mus.addJugador(j);
 			
-			System.out.println("* Jugarán al Mus:");
-			System.out.print("-> ");
-			for (Jugador jugador : mus.getJugadores()) System.out.print(jugador.getNombre() + " ");
-			System.out.println("\nCon las cartas : " + mus.getBaraja());
-		} catch (Exception e) {
-			System.out.println("\nERROR Mus : " + e.getMessage());
-		}
+		System.out.println("* Jugarán al Mus:");
+		System.out.print("-> ");
+		for (Jugador jugador : mus.getJugadores()) System.out.print(jugador.getNombre() + " ");
+		System.out.println("\nCon las cartas : " + mus.getBaraja());
 		
 		try {
 			Poker poker = new Poker(jugadoresPoker);
