@@ -1,4 +1,4 @@
-package main;
+package cartas;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,4 +35,8 @@ public abstract class Baraja {
 	 * Reinicia la baraja (clase abstracta: se implementa en cada clase hija).
 	 */
 	public abstract void reiniciar();
+	
+	public ArrayList<Carta> getCartas() {
+		return this.cartas;
+	}
 }

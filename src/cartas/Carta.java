@@ -1,4 +1,4 @@
-package main;
+package cartas;
 
 /**
  * Para el manejo de las cartas del juego.

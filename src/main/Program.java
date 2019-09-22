@@ -1,5 +1,11 @@
 package main;
 
+import java.util.ArrayList;
+
+import juego.Jugador;
+import juego.Mus;
+import juego.Poker;
+
 /**
  * 
  * Programa para lanzar juegos de cartas.
@@ -19,35 +25,30 @@ public class Program {
 	 * @args son los parámetros pasados al programa por consola, si los hay.
 	 */
 	public static void main(String[] args) {
+		ArrayList<Jugador> jugadoresMus = new ArrayList<Jugador>();
+		ArrayList<Jugador> jugadoresPoker = new ArrayList<Jugador>();
+		
 		Jugador jugador1 = new Jugador("Jugador 1");
 		Jugador jugador2 = new Jugador("Jugador 2");
 		Jugador jugador3 = new Jugador("Jugador 3");
 		Jugador jugador4 = new Jugador("Jugador 4");
-				
-		Francesa francesa = new Francesa();
-		Española española = new Española();
 		
-		francesa.barajar();
-		española.barajar();
+		jugadoresMus.add(jugador1);
+		jugadoresMus.add(jugador2);
+		jugadoresPoker.add(jugador3);
+		jugadoresPoker.add(jugador4);
 		
-		for (int c = 0; c < 5; c++ ) jugador1.darCarta(francesa.repartir());
-		for (int c = 0; c < 5; c++ ) jugador2.darCarta(francesa.repartir());
+		Mus mus = new Mus(jugadoresMus);
+		Poker poker = new Poker(jugadoresPoker);
 		
-		System.out.println("Las cartas de " + jugador1.getNombre() + " son: " + jugador1.getCartas());
-		System.out.println("Las cartas de " + jugador2.getNombre() + " son: " + jugador2.getCartas());
-		
-		for (int c = 0; c < 5; c++ ) jugador3.darCarta(española.repartir());
-		for (int c = 0; c < 5; c++ ) jugador4.darCarta(española.repartir());
-		
-		System.out.println("Las cartas de " + jugador3.getNombre() + " son: " + jugador3.getCartas());
-		System.out.println("Las cartas de " + jugador4.getNombre() + " son: " + jugador4.getCartas());
-		
-		española.reiniciar();
-		francesa.reiniciar();
-		
-		System.out.println(francesa.cartas);
-		System.out.println(española.cartas);
-		
+		System.out.println("* Jugarán al Mus:");
+		System.out.print("-> ");
+		for (Jugador jugador : mus.getJugadores()) System.out.print(jugador.getNombre() + " ");
+		System.out.println("\nCon las cartas : " + mus.getBaraja());
+		System.out.println("\n* Jugarán al Poker:");
+		System.out.print("-> ");
+		for (Jugador jugador : poker.getJugadores()) System.out.print(jugador.getNombre() + " ");
+		System.out.println("\nCon las cartas : " + poker.getBaraja());
 	}
 
 }

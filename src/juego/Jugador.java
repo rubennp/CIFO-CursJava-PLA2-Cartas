@@ -1,6 +1,8 @@
-package main;
+package juego;
 
 import java.util.ArrayList;
+
+import cartas.Carta;
 
 /**
  * Para el manejo de los jugadores.
