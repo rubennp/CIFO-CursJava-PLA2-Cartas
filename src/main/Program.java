@@ -19,22 +19,31 @@ public class Program {
 	 * @args son los parámetros pasados al programa por consola, si los hay.
 	 */
 	public static void main(String[] args) {
-		Carta carta = new Carta("1", "bastos", 1);
-		Carta carta2 = new Carta("5", "oros", 5);
-		Jugador jugador = new Jugador("Rubèn");
-		jugador.darCarta(carta);
-		jugador.darCarta(carta2);
-		System.out.println("El jugador " + jugador.getNombre() + " tiene " + jugador.juego());
-		System.out.println("Después de retirar " + jugador.retirarCarta(0) + ", sus cartas son: " + jugador.juego());
-		
+		Jugador jugador1 = new Jugador("Jugador 1");
+		Jugador jugador2 = new Jugador("Jugador 2");
+		Jugador jugador3 = new Jugador("Jugador 3");
+		Jugador jugador4 = new Jugador("Jugador 4");
+				
 		Francesa francesa = new Francesa();
 		Española española = new Española();
 		
-		System.out.println(francesa.cartas);
-		System.out.println(española.cartas);
-		
 		francesa.barajar();
 		española.barajar();
+		
+		for (int c = 0; c < 5; c++ ) jugador1.darCarta(francesa.repartir());
+		for (int c = 0; c < 5; c++ ) jugador2.darCarta(francesa.repartir());
+		
+		System.out.println("Las cartas de " + jugador1.getNombre() + " son: " + jugador1.getCartas());
+		System.out.println("Las cartas de " + jugador2.getNombre() + " son: " + jugador2.getCartas());
+		
+		for (int c = 0; c < 5; c++ ) jugador3.darCarta(española.repartir());
+		for (int c = 0; c < 5; c++ ) jugador4.darCarta(española.repartir());
+		
+		System.out.println("Las cartas de " + jugador3.getNombre() + " son: " + jugador3.getCartas());
+		System.out.println("Las cartas de " + jugador4.getNombre() + " son: " + jugador4.getCartas());
+		
+		española.reiniciar();
+		francesa.reiniciar();
 		
 		System.out.println(francesa.cartas);
 		System.out.println(española.cartas);

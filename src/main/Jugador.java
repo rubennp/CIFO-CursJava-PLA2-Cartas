@@ -52,10 +52,19 @@ public class Jugador {
 		this.cartas = cartas;
 	}
 	
+	/**
+	 * Añade una carta a las cartas del jugador.
+	 * @param carta
+	 */
 	public void darCarta(Carta carta) {
 		this.cartas.add(carta);
 	}
 	
+	/**
+	 * Retira una carta de las cartas del jugador.
+	 * @param indice es la posición en el array de la carta a retirar.
+	 * @return Carta es la carta que se ha retirado de las cartas del jugador.
+	 */
 	public Carta retirarCarta(int indice) {
 		Carta carta = cartas.get(indice);
 		
@@ -64,7 +73,11 @@ public class Jugador {
 		return carta;
 	}
 	
+	/**
+	 * Obtener las cartas del jugador.
+	 * @return las cartas del jugador
+	 */
 	String juego() {
-		return cartas.toString();
+		return getCartas().toString();
 	}
 }

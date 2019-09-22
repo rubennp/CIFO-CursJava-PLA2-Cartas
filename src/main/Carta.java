@@ -76,7 +76,7 @@ public class Carta {
 	}
 	
 	/**
-	 * Sobreescribe el método toString de la clase madre Object para mostrar "nombre + de + valor" al mostrar una carta.
+	 * Sobreescribe el método toString de la clase madre Object para mostrar "nombre + ' de ' + valor" al mostrar una carta.
 	 */
 	@Override
 	public String toString() {

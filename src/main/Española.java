@@ -1,13 +1,27 @@
 package main;
 
+/**
+ * 
+ * Extiende la clase Baraja.
+ * Para manejar barajas del tipo español.
+ * 
+ * @author Rubèn Nieto
+ *
+ */
 public class Española extends Baraja {
 	private final String[] palos = { "espadas", "bastos", "oros", "copas" };
 	private final String[] nombres = { "1", "2", "3", "4", "5", "6", "7", "sota", "caballo", "rey" };
 	
+	/**
+	 * Constructor sin parámetros, reinicia la baraja.
+	 */
 	public Española() {
 		this.reiniciar();
 	}
 	
+	/**
+	 * Implementa el método reiniciar() de Baraja con las cartas de la baraja española.
+	 */
 	@Override
 	public void reiniciar() {
 		if (this.cartas.size() > 0) this.cartas.removeAll(this.cartas);
