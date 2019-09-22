@@ -47,7 +47,7 @@ public class Program {
 			for (Jugador jugador : mus.getJugadores()) System.out.print(jugador.getNombre() + " ");
 			System.out.println("\nCon las cartas : " + mus.getBaraja());
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("\nERROR Mus : " + e.getMessage());
 		}
 		
 		try {
@@ -57,7 +57,7 @@ public class Program {
 			for (Jugador jugador : poker.getJugadores()) System.out.print(jugador.getNombre() + " ");
 			System.out.println("\nCon las cartas : " + poker.getBaraja());
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("\nERROR Poker : " + e.getMessage());
 		}
 	}
 }

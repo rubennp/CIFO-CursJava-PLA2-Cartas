@@ -22,15 +22,6 @@ public class Mus extends Juego {
 		super();
 		this.baraja.barajar();
 	}
-	/**
-	 * Constructor pasando los jugadores.
-	 * @param jugadores son los jugadores del juego.
-	 * @throws Exception : mínimo 2 jugadores.
-	 */
-	public Mus(ArrayList<Jugador> jugadores) throws Exception {
-		super(jugadores);
-		this.baraja.barajar();
-	}
 	
 	/**
 	 * Obtener la baraja actual del juego.

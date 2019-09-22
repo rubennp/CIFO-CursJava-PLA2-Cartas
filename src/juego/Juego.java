@@ -15,11 +15,12 @@ public abstract class Juego {
 	ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 	
 	/**
-	 * Constructor de clase sin parámetros.
+	 * Constructor de clase sin parámetros (lo utiliza clase Mus).
 	 */
 	public Juego() { }
+	
 	/**
-	 * Constructor clase con parámetros.
+	 * Constructor clase con parámetros (lo utiliza clase Poker).
 	 * @param jugadores serán los jugadores que jugarán.
 	 */
 	public Juego(ArrayList<Jugador> jugadores) throws Exception {
