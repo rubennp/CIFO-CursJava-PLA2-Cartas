@@ -4,7 +4,7 @@ package main;
  * 
  * Programa para lanzar juegos de cartas.
  * ------------------------------------- 
- * Actividat PLA2 del Curs de desenvolupament Java
+ * Activitat del PLA2 del Curs de desenvolupament Java.
  * 
  * CIFO Hospitalet (PQTM'2019)
  * Professor: Juan Pablo Fuentes
@@ -25,6 +25,7 @@ public class Program {
 		jugador.darCarta(carta);
 		jugador.darCarta(carta2);
 		System.out.println("El jugador " + jugador.getNombre() + " tiene " + jugador.juego());
+		System.out.println("Después de retirar " + jugador.retirarCarta(0) + ", sus cartas son: " + jugador.juego());
 	}
 
 }
