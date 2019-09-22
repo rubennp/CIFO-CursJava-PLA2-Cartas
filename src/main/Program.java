@@ -28,7 +28,7 @@ public class Program {
 		System.out.println("Después de retirar " + jugador.retirarCarta(0) + ", sus cartas son: " + jugador.juego());
 		
 		Francesa francesa = new Francesa();
-		Espanyola española = new Espanyola();
+		Española española = new Española();
 		
 		System.out.println(francesa.cartas);
 		System.out.println(española.cartas);

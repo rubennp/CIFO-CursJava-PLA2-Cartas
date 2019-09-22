@@ -1,10 +1,10 @@
 package main;
 
-public class Espanyola extends Baraja {
+public class Española extends Baraja {
 	private final String[] palos = { "espadas", "bastos", "oros", "copas" };
 	private final String[] nombres = { "1", "2", "3", "4", "5", "6", "7", "sota", "caballo", "rey" };
 	
-	public Espanyola() {
+	public Española() {
 		this.reiniciar();
 	}
 	
